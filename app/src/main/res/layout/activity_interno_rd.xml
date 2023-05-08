@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="RevisionClick"
+    tools:context=".InternoRD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E6E6E6"
+            android:clickable="true"
+            android:onClick="EditaDatos"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageview5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/seguritech" />
+
+            <LinearLayout
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:background="#63FFFFFF"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="REPORTE  DE MANTENIMIENTO CORRECTIVO"
+                    android:textColor="#EF0B0B"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textview11"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="No de Reporte:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/TicketRDI"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textiew9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fecha/hora de inicio:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/FechaInicioRDI"
+                        android:layout_width="134dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textiew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fecha/hora de inicio:"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/FechaFinRDI"
+                        android:layout_width="134dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#361458BD"
+            android:clickable="true"
+            android:onClick="EditaDatos"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Datos del equipo"
+                android:textColor="#1B4598"
+                android:textColorHighlight="#3AC4D6"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview17"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="      Aduana:"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/AduanaRDI"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview15"
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="      Equipo:"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/EquipoRDI"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview19"
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="     No Serie:"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/SerieRDI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="      Ubicación:"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/UbicacionRDI"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ClickGuarda"
+            app:srcCompat="@drawable/ic_baseline_save_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/Suministrode"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="SuministrodeClick"
+                    android:text="Suministro de:"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/SuministrodeCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/Dieselchasis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Diésel al chasis"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Dieselgenerador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Diésel al generador eléctrico"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Adblue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="AdBlue"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SuministrodeComen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/Dieselchasiscomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de Diésel al chasis"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/Dieselgeneradorcomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de Diésel al generador eléctrico"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/Adbluecomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de AdBlue"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/SeguridadR"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="SeguridadRClick"
+                    android:text="Seguridad radiológica:"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/SeguridadRCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/TomaNiveles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Toma de niveles"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Calibracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Calibración"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Curso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Curso"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TomaNivelesComen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/TomadeNivelesComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de toma de niveles"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/CalibraciónComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de calibración"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/CursoComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de curso"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/RevisionTHSCAN"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="RevisionClick"
+                    android:text="Revisión del THSCAN:"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/Revision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/Acelerador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="En el subsistema de acelerador"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Detector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="En el subsistema de detector"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Mecanicas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="En el subsistema de partes mecánicas"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Electrico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="En el subsistema de control eléctrico"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Operacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="En el subsistema de operación e inspección"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RevisionCome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/AceleadorComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de acelerador"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/DetectorComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de detector"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/MecanicasComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de partes mecanicas"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/ElectricoComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de control eléctrico"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/OperacionComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de operación e inspección"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/VisitaTecnica"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="VisitaTecnicaClick"
+                    android:text="Visita técnica:"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/Servicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/Chasis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Servicio al chasis VOLVO"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Generador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Servicio a generaor eléctrico"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Aire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Servicio a aire acondicionado"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Extintores"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Servicio a extintores"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/CCTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Servicio a CCTV"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ChasisCome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/ChasisComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de servicio a chasis"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/GeneradorComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de servicio a generador eléctrico"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/AireComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de servicio a aire acondicionado"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/ExtintoresComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de servicio a extintores"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/CCTVComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Servicio a extintores"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/Otros"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="OtrosClick"
+                    android:text="Otros:"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/Documentaci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/Documentacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Documentación"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Levantamiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Levantamiento"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Asesoramiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Asesoramiento técnico"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Capacitacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Capacitación"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Electrificacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Electrificación"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/Ubicacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Cambio de ubicación de THSCAN"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/CentroServicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text="Cambio de centro de servicio"
+                        android:textSize="11sp" />
+
+                    <CheckBox
+                        android:id="@+id/otros"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickCheckSecundaria"
+                        android:text=""
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/OtrosCome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/DocumentacionComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de documentación"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/LevantamientoComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de levantamiento"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/AsesoramientoComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de asesoramiento"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/CapacitacionComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de capacitación"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/ElectrificacionComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de electrificación"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/UbicacionComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de cambio de ubicación"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/CentroServicioComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario de cambio de centro de servicio"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/otrosComen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Comentario en blanco"
+                    android:inputType="textPersonName"
+                    android:textSize="11sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Observaciones:" />
+
+                <EditText
+                    android:id="@+id/Obs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textImeMultiLine"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="SeleccionaCredencialSeguritech"
+                    android:text="Personal Seguritech"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Nombre1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="SeleccionaCredencialSeguritech"
+                    android:text="Añade personal"
+                    android:textColor="#1564D6" />
+
+                <TextView
+                    android:id="@+id/Puesto1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textView65"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Firma"
+                    android:textColor="#1564D6" />
+
+                <ImageView
+                    android:id="@+id/Firma1View"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:onClick="ToFirmas"
+                    app:srcCompat="@drawable/ic_baseline_draw_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="206dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="SeleccionaCredencialANAM"
+                    android:text="Personal Nuctech"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Nombre2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="SeleccionaCredencialANAM"
+                    android:text="Añade personal"
+                    android:textColor="#1564D6" />
+
+                <TextView
+                    android:id="@+id/Puesto2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="SeleccionaCredencialANAM" />
+
+                <TextView
+                    android:id="@+id/textView66"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Firma"
+                    android:textColor="#1564D6" />
+
+                <ImageView
+                    android:id="@+id/Firma2View"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="ToFirmas2"
+                    app:srcCompat="@drawable/ic_baseline_draw_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Reporte Fotográfico"
+                    android:textSize="11sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="TORFotograficoI"
+                    app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="CreaReporte"
+                    android:textSize="11sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="CrearRDI"
+                    app:srcCompat="@drawable/ic_baseline_content_paste_go_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

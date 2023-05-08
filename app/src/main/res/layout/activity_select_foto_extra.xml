@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SelectFotoExtra">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/FotoPreview"
+            android:layout_width="230dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/image" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="SeleccionaFoto"
+            app:srcCompat="@drawable/ic_baseline_drive_folder_upload_24" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Tomafoto"
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/DescripcionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="GuardarCambios"
+        app:srcCompat="@drawable/ic_baseline_check_24" />
+
+</LinearLayout>

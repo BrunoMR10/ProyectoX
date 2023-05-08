@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AgregaANAM">
+    <EditText
+        android:id="@+id/ANAM_ApellidoPaterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Apellido Paterno"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ANAM_ApellidoMaterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Apellido Materno"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ANAM_Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ANAM_Puesto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Puesto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ANAM_Correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Correo Electronico (opcional)"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/ANAM_Numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Numero de telefono (opcional)"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Credencial"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Foto frontal" />
+
+
+            <ImageView
+                android:id="@+id/Foto1ANAM"
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                app:srcCompat="@drawable/image" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="FotoFrontal"
+                app:srcCompat="@drawable/ic_baseline_drive_folder_upload_24" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/Subiendo2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="86dp"
+            android:layout_height="177dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/FotoANAM"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="Foto trasera" />
+
+
+            <ImageView
+                android:id="@+id/Foto2ANAM"
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                app:srcCompat="@drawable/image" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="FotoTrasera"
+                app:srcCompat="@drawable/ic_baseline_drive_folder_upload_24" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="RegistraANAM"
+        android:text="Registrar" />
+</LinearLayout>
