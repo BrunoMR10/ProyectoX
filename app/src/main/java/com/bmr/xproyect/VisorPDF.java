@@ -103,6 +103,13 @@ public class VisorPDF extends AppCompatActivity {
         TODO = (ImageButton)findViewById(R.id.SubeTodo) ;
         Subiendo = (ProgressBar)findViewById(R.id.Subiendo) ;
 
+        if (Datos[0].equals("Actadenetrega")){
+            TODO.setVisibility(View.INVISIBLE);
+            todo.setVisibility(View.INVISIBLE);
+            PDF.setVisibility(View.INVISIBLE);
+            pdf.setVisibility(View.INVISIBLE);
+        }
+
         if (Fotos!=null){
             Estatus.setText("SubiendoFotos");
             Estatus.setVisibility(View.VISIBLE);
@@ -141,12 +148,22 @@ public class VisorPDF extends AppCompatActivity {
     }
     public void CompartirPDF(View view){
         File file;
-        if (Datos[0].equals("Actadeneetrga")){
+        System.out.println(Datos[0]);
+        if (Datos[0].equals("Actadenetrega")){
             ContextWrapper cw = new ContextWrapper(getApplicationContext());
             File directory = cw.getDir("Actadeentrga", Context.MODE_PRIVATE);
             file = new File(directory, name);
+            if (file.exists()){
+                System.out.println("Existe");
+            }
+            else{
+                System.out.println("No Existe");
+                System.out.println("Name"+name);
+                System.out.println("Directory"+directory.toString());
+            }
 
         }else {
+
             file = new File(outputPDF);
         }
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);

@@ -443,28 +443,26 @@
                 <TextView
                     android:id="@+id/textView21"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="51dp"
                     android:layout_weight="1"
                     android:text="El equipo esta en condiciones de operación:"
                     android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/textView23"
+                <CheckBox
+                    android:id="@+id/Si"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:foregroundTint="#8F4141"
-                    android:shadowColor="#7A3B3B"
-                    android:text="SI"
-                    android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:onClick="checksi"
+                    android:text="Si" />
 
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="73dp"
+                <CheckBox
+                    android:id="@+id/No"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No"
-                    android:textSize="10sp" />
+                    android:layout_weight="1"
+                    android:onClick="CheckNo"
+                    android:text="No" />
 
                 <ImageButton
                     android:id="@+id/imageButton23"
@@ -473,6 +471,7 @@
                     android:layout_weight="1"
                     android:onClick="Guarda"
                     app:srcCompat="@drawable/ic_baseline_save_24" />
+
             </LinearLayout>
 
             <LinearLayout

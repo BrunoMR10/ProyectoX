@@ -1,5 +1,9 @@
 package com.bmr.xproyect.Documentos;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Environment;
 
 import com.bmr.xproyect.Datos.Datos;
@@ -566,10 +570,17 @@ public class Preventivo {
         }
     }
     ///////////////////////////////RDP//////////////////////////////////////////////////////////////////
-    public void CreaReporteDigital(String[] Datos,ImageData imageData,String[]ComentariosPrev,String[]EstatusEquipo)throws IOException {
+    public void CreaReporteDigital(String[] Datos,ImageData imageData,String[]ComentariosPrev,String[]EstatusEquipo,boolean[]Sino)throws IOException {
         String ExternalStorageDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) + java.io.File.separator;
         String rutacarpeta = "ProyectoX/"+"Preventivo"+"/" + Datos[0] + "/";
         String Name = Datos[0]+"(RD).pdf";
+        Boolean si,no;
+        SharedPreferences sh = getApplicationContext().getSharedPreferences("Datos"+Datos[0], Context.MODE_PRIVATE);
+        si = Sino[0];
+        no = Sino[1];
+
+        System.out.println("Si"+si);
+        System.out.println("No"+no);
         String DEST = ExternalStorageDirectory+rutacarpeta+Name;
         PdfDocument pdf = new PdfDocument(new PdfWriter(DEST));
         PdfPage page = pdf.addNewPage();
@@ -586,7 +597,7 @@ public class Preventivo {
         InsertabordesCredenciales(page2);
         InsertaImagenesCredenciales(page2,font,Datos);
         añadeCheck(Datos[11],page);
-        AñadirLineas2(page);
+        AñadirLineas2(page,Sino);
         AñadeContenidoCuadrosDatos(font,page,bold,Datos);
         AñadeDescripciones(font,page,bold,Datos);
         InsertaPiedePagina2(pdf);
@@ -796,6 +807,7 @@ public class Preventivo {
     private void Ceck(PdfPage page,int y){
         PdfCanvas canvas = new PdfCanvas(page);
 
+
         // Create a 100% Magenta color
 
         canvas
@@ -943,7 +955,7 @@ public class Preventivo {
                     559, 15, 1, TextAlignment.RIGHT, VerticalAlignment.TOP, 0);
         }
     }
-    private void AñadirLineas2(PdfPage page) {
+    private void AñadirLineas2(PdfPage page,boolean[]sino) {
         PdfCanvas canvas = new PdfCanvas(page);
 
         // Create a 100% Magenta color
@@ -979,12 +991,7 @@ public class Preventivo {
                 .moveTo(255, 137)
                 .lineTo(255, 145)
 
-                .moveTo(220, 137)
-                .lineTo(255, 145)
 
-
-                .moveTo(255, 137)
-                .lineTo(220, 145)
 
                 .moveTo(270, 137)
                 .lineTo(305, 137)
@@ -1014,7 +1021,21 @@ public class Preventivo {
 
 
                 .setLineWidth(0).closePathStroke();
+               if (sino[0]){
+                   canvas   .moveTo(220, 137)
+                           .lineTo(255, 145)
 
+
+                           .moveTo(255, 137)
+                           .lineTo(220, 145)
+                           .setLineWidth(0).closePathStroke();
+               }else {
+                           canvas.moveTo(270, 137)
+                           .lineTo(305, 145)
+
+                           .moveTo(270, 145)
+                           .lineTo(305, 137).setLineWidth(0).closePathStroke();
+               }
     }
     private void Aceptacion(String[] Datos,PdfCanvas pdfCanvas,PdfFont font,PdfFont bold,int x,int y, int w,int h){
         Rectangle rectangle = new Rectangle(x, y, w, h);

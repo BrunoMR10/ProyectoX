@@ -15,8 +15,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -27,7 +27,6 @@ import com.bmr.xproyect.Adapters.AdapterActividades;
 import com.bmr.xproyect.Datos.Datos;
 import com.bmr.xproyect.Documentos.Preventivo;
 import com.bmr.xproyect.Entidades.ComentariosRDP;
-import com.bmr.xproyect.Entidades.RFP;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -59,11 +58,15 @@ public class PreventivoRD extends AppCompatActivity {
     String nombreANAM,nombreSeguritech,puestoseguritech,puestoANAM,CambioCredencial;
     EditText HorasGenerador,ConteoInspecciones,Observaciones;
     ProgressBar cargaANAM1,cargaANAM2,cargaSeguritech;
+    CheckBox Si,No;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preventivo_rd);
+        Si = (CheckBox) findViewById(R.id.Si);
+        No = (CheckBox) findViewById(R.id.No);
+
         TrimestreRDP = (TextView) findViewById(R.id.TrimestreRDP);
         TicketRDP = (TextView) findViewById(R.id.TicketRDP);
         FechaRDP = (TextView) findViewById(R.id.FechaRDP);
@@ -114,6 +117,7 @@ public class PreventivoRD extends AppCompatActivity {
             Credenciales = true;
             CredencialesRutina();
         }
+
         else{
             SharedPreferences sh = getSharedPreferences("Datos" + Datos[0], MODE_PRIVATE);
             nombreSeguritech = sh.getString("Datos4", "");
@@ -140,6 +144,42 @@ public class PreventivoRD extends AppCompatActivity {
 
         ConfiguraIncio();
     }
+    public void checksi(View view){
+        Si.setChecked(true);
+        No.setChecked(false);
+        rutinacheckbox();
+    }
+    public void CheckNo(View view){
+        No.setChecked(true);
+        Si.setChecked(false);
+        rutinacheckbox();
+    }
+    private boolean[] rutinacheckbox(){
+        boolean [] sino= new boolean[] {
+                true,
+                false
+        };
+        boolean si,no;
+        if (Si.isChecked())si = true;
+        else si=false;
+        if(No.isChecked())no = true;
+        else no = false;
+
+        sino [0]= si;
+        sino [1] = no;
+
+        System.out.println("Obteniendo Si"+si);
+        System.out.println("Obteniendo No"+no);
+        SharedPreferences sharedPreferences = getSharedPreferences("Datos"+Datos[0],MODE_PRIVATE);
+        System.out.println("Datos"+Datos[0]);
+        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+        myEdit.putBoolean("si",si);
+        myEdit.putBoolean("no",no);
+        myEdit.commit();
+
+        return sino;
+    }
+
     private boolean Actualiza(){
         SharedPreferences sh2 = getSharedPreferences("Datos", MODE_PRIVATE);
         SharedPreferences.Editor myEdit = sh2.edit();
@@ -213,6 +253,13 @@ public class PreventivoRD extends AppCompatActivity {
         Observaciones.setText(ObtenEstatusEquipo()[0]);
         HorasGenerador.setText(ObtenEstatusEquipo()[1]);
         ConteoInspecciones.setText(ObtenEstatusEquipo()[2]);
+
+        boolean si,no;
+        SharedPreferences sharedPreferences = getSharedPreferences("Datos"+Datos[0],MODE_PRIVATE);
+        si = sharedPreferences.getBoolean("si",true);
+        no = sharedPreferences.getBoolean("no",false);
+        Si.setChecked(si);
+        No.setChecked(no);
     }
     public void Guarda(View view){
         GurdarEstatusEquipo();
@@ -400,7 +447,7 @@ public class PreventivoRD extends AppCompatActivity {
                 byte[] bitmapData = stream.toByteArray();
                 imageData = ImageDataFactory.create(bitmapData);
                 GurdarEstatusEquipo();
-                doc.CreaReporteDigital(Datos,imageData,ObtenComentarios(),ObtenEstatusEquipo());
+                doc.CreaReporteDigital(Datos,imageData,ObtenComentarios(),ObtenEstatusEquipo(),rutinacheckbox());
                 Datos[27]=ConteoInspecciones.getText().toString();
                 Datos[28]=HorasGenerador.getText().toString();
                 Datos[1]="Preventivo";
