@@ -194,7 +194,7 @@ public class Datos {
             "Revisión de niveles al chasis VOLVO.",
             "Pruebas de sistema de bloqueo de seguridad.",
             "Verificación del subsistema del acelerador.",
-            "Verificación del subsitema del modulador.",
+            "Verificación del subsistema del modulador.",
             "Revisión y calibración del sistema hidráulico.",
             "Mantenimiento al generador eléctrico.",
             "Limpieza y pruebas a los módulos de los detectores.",
